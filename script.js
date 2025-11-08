@@ -205,18 +205,21 @@ contactForm?.addEventListener('submit', async (e) => {
 
 // Function to show form message
 function showFormMessage(message, type) {
-    formMessage.textContent = message;
-    formMessage.className = `form-message ${type}`;
-    formMessage.style.display = 'block';
+    const formMessage = document.getElementById('formMessage');
+    if (formMessage) {
+        formMessage.textContent = message;
+        formMessage.className = `form-message-modern ${type}`;
+        formMessage.style.display = 'block';
 
-    // Scroll to message
-    formMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        // Scroll to message
+        formMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
 
-    // Hide message after 5 seconds for success, keep error visible
-    if (type === 'success') {
-        setTimeout(() => {
-            formMessage.style.display = 'none';
-        }, 5000);
+        // Hide message after 5 seconds for success, keep error visible
+        if (type === 'success') {
+            setTimeout(() => {
+                formMessage.style.display = 'none';
+            }, 5000);
+        }
     }
 }
 
