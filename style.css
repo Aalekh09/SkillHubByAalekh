@@ -541,6 +541,34 @@ section {
     opacity: 0.9;
 }
 
+.project-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-top: 1rem;
+}
+
+.project-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--off-white);
+    color: var(--dark-gray);
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: var(--transition);
+    border: 1px solid rgba(98, 195, 112, 0.2);
+    text-align: center;
+}
+
+.project-link:hover {
+    background-color: var(--mint-green);
+    color: var(--white);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(98, 195, 112, 0.3);
+}
+
 /* ============================================
    Contact Section
    ============================================ */
